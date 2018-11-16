@@ -7,7 +7,7 @@ const swUtils = new SwUtils();
 // --------------------------------------------------------------------------
 // Estos valores se deben modificar cada vez que se publique en produccion
 modoProduccion = true;
-versionCache = '1.0.79';
+versionCache = '1.0.80';
 
 // --------------------------------------------------------------------------
 // asigna version a los nombres de los caches
@@ -19,19 +19,19 @@ swConfig.INMUTABLE_CACHE = swConfig.INMUTABLE_CACHE.replace(/{VERSION}/ig, versi
 // hace el cache de los archivos dependiendo del ambiente
 if (modoProduccion) {
     swConfig.APP_SHELL_VERSIONADOS = [
-        'runtime.a66f828dca56eeb90e02.js',
-        'styles.a63b94cf5d399b7f71eb.css',
-        'polyfills.7a0e6866a34e280f48e7.js',
-        'main.dbd65a8fa8b28e090f53.js'
+        './runtime.a66f828dca56eeb90e02.js',
+        './styles.a63b94cf5d399b7f71eb.css',
+        './polyfills.7a0e6866a34e280f48e7.js',
+        './main.185487795c243fcef7ed.js'
     ];
 } else {
     // -- desarrollo --
     swConfig.APP_SHELL_VERSIONADOS = [
-        'runtime.js',
-        'polyfills.js',
-        'styles.js',
-        'vendor.js',
-        'main.js'
+        './runtime.js',
+        './polyfills.js',
+        './styles.js',
+        './vendor.js',
+        './main.js'
     ];
 }
 
